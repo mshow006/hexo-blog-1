@@ -1,11 +1,12 @@
 ---
-title: Ubuntu系统镜像源更换
-date: 2020-09-17 21:12:08
+title: 更换Ubuntu镜像源
+date: 2020-09-6 21:12:08
 updated: 2020-09-17 21:12:08
 categories:
   - Ubuntu
 tags:
   - Ubuntu
+comments: true
 ---
 
 - 备份 `/etc/apt/sources.list` 文件

@@ -7,6 +7,7 @@ categories:
 tags:
  - Hexo
  - Next
+comments: true
 ---
 
 ## 必读文档
