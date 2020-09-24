@@ -14,8 +14,6 @@ updated: 2020-09-24 15:06:19
 
 ### Java
 
-<!-- more -->
-
 > 2020年9月7日更新
 
 - 安装（默认 JDK-11）
@@ -26,6 +24,8 @@ updated: 2020-09-24 15:06:19
     # 如果只需要Java运行环境，那么可以只安装JRE
     sudo apt install default-jre
     ```
+
+<!-- more -->
 
 - 确认版本
 
@@ -195,9 +195,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 由于网络原因下载慢的，可以使用下面的备份地址
 
+`https://gist.githubusercontent.com/yingming006/5fad4b563174be26bce012ba0c3424b8/raw/2a39be32670ac118ac753312b302f06d3e587f34/zsh-install.sh`
+
 ```bash
-# install.sh 备份地址 https://gist.githubusercontent.com/yingming006/5fad4b563174be26bce012ba0c3424b8/raw/2a39be32670ac118ac753312b302f06d3e587f34/zsh-install.sh
-sh install.sh
 sh -c "$(curl -fsSL https://gist.githubusercontent.com/yingming006/5fad4b563174be26bce012ba0c3424b8/raw/2a39be32670ac118ac753312b302f06d3e587f34/zsh-install.sh)"
 ```
 
