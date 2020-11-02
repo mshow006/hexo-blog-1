@@ -13,7 +13,7 @@ comments: true
 ## 必读文档
 
 - [Hexo 官方文档](https://hexo.io/zh-cn/)
-- [Next 官方文档](https://theme-next.org/docs/)
+- [Next 官方文档](https://theme-next.js.org/)
 
 <!-- more -->
 
