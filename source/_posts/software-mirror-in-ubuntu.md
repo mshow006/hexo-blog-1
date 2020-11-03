@@ -30,6 +30,8 @@ updated: 2020-11-02 16:29:51
     nrm test taobao
     ```
 
+<!-- more -->
+
 ## Yarn
 
 - 全局修改
@@ -53,3 +55,6 @@ updated: 2020-11-02 16:29:51
 
 ## pip3
 
+
+## 参考
+[yarn 国内加速，修改镜像源](https://learnku.com/articles/15976/yarn-accelerate-and-modify-mirror-source-in-china)
