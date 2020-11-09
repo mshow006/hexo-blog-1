@@ -1,8 +1,8 @@
 #!/bin/bash  
-# deploy hexo
+echo "#########deploy hexo#########"
 hexo clean && hexo g && hexo d
 
-# deploy git
+echo "#########deploy git#########"
 host=$(git status | awk -F\' '{print $2}' | awk -F/ '{print $1}' | sed -n 2p)
 branch=$(git status | awk -F\' '{print $2}' | awk -F/ '{print $2}' | sed -n 2p)
 git add .
