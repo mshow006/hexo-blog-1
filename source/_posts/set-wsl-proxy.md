@@ -24,6 +24,8 @@ export https_proxy="socks5://127.0.0.1:10808"
 
 > 此方法仅为临时使用，退出 bash 后临时环境变量就会失效
 
+<!-- more -->
+
 ## 2.使用脚本在登录 WSL 时自动执行
 
 新建脚本文件 `~/.set-wsl-proxy.sh`
