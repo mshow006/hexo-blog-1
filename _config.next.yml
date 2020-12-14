@@ -606,10 +606,10 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
+  enable: true
   appId: 0w9WHb45Sbm8ELs90WgsaQnJ-gzGzoHsz
   appKey: FnbaTROPb3OWVu3I2K9P3wF9
-  placeholder: 留下邮箱回复会有提醒哦~ # Comment box placeholder
+  placeholder: '' # Comment box placeholder
   avatar: mm # Gravatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
@@ -628,7 +628,7 @@ valine:
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
+  enable: false
   github_id: yingming006
   repo: gitalk-hexo-blog
   client_id: 53230e90ef84fc880a89
