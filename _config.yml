@@ -113,9 +113,9 @@ deploy:
 - type: git
   repo: git@github.com:yingming006/yingming006.github.io.git
   branch: master
-- type: git
-  repo: git@github.com:yingming006/hexo-blog
-  branch: master
+# - type: git
+#   repo: git@github.com:yingming006/hexo-blog
+#   branch: master
 
 search:
   path: search.xml
