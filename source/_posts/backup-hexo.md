@@ -37,11 +37,8 @@ theme: "next"
 
 另附 `.gitignore`
 ```
-.DS_Store
-Thumbs.db
 db.json
-*.log
 node_modules/
 public/
-.deploy*/
+.deploy_git/
 ```
