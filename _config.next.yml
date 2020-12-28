@@ -677,14 +677,14 @@ baidu_analytics: # <app_id>
 growingio_analytics: # <project_id>
 
 # CNZZ count
-cnzz_siteid:
+cnzz_siteid: 1279568860
 
 # Show number of visitors of each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
 # Warning: Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: 0w9WHb45Sbm8ELs90WgsaQnJ-gzGzoHsz
   app_key: FnbaTROPb3OWVu3I2K9P3wF9
   # Required for apps from CN region
