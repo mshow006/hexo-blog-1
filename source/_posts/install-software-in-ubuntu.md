@@ -4,7 +4,7 @@ tags:
   - backup
 comments: true
 date: 2020-09-7 15:06:19
-updated: 2020-09-24 15:06:19
+updated: 2020-12-29 12:06:19
 ---
 > 在进行软件安装命令`apt`前，尽可能的进行一次更新操作：
 >
@@ -193,9 +193,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 由于网络原因下载慢的，可以使用下面的备份地址
 
-`https://gist.githubusercontent.com/yingming006/5fad4b563174be26bce012ba0c3424b8/raw/2a39be32670ac118ac753312b302f06d3e587f34/zsh-install.sh`
+`https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh`
 
 ```bash
-sh -c "$(curl -fsSL https://gist.githubusercontent.com/yingming006/5fad4b563174be26bce012ba0c3424b8/raw/2a39be32670ac118ac753312b302f06d3e587f34/zsh-install.sh)"
+sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
 ```
 
