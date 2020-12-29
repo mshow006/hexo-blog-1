@@ -184,10 +184,13 @@ sudo apt install neofetch
 ### zsh & oh-my-zsh
 
 ```bash
+# 安装 zsh
 sudo apt install zsh
 
+# 更换默认 SHELL
 chsh -s $(which zsh)
 
+# 安装 oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
