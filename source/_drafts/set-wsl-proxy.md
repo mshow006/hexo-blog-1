@@ -7,37 +7,47 @@ date: 2020-11-30 16:58:27
 updated: 2020-11-30 16:58:27
 ---
 
+# 
+
 > windows 代理软件必须开启允许来自局域网(LAN)的连接
 ![v2ray设置](https://i.loli.net/2020/11/30/vZ1EH96GKOnDQBI.png)
 
-## 1. 设置临时代理
-
-假设代理监听端口为 10808
-
 ```bash
-# 在 wsl 中输入以下命令
-export http_proxy="socks5://127.0.0.1:10808"
-export https_proxy="socks5://127.0.0.1:10808"
-```
+#!/bin/bash
+PROXY_PORT=10808
+WINDOWS_NAMESERVER=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
+ALL_PROXY=socks5://$WINDOWS_NAMESERVER:$PROXY_PORT
 
-使用`curl www.google.com`测试一下，有输出结果即为配置成功。
+case $1 in
+        start)
+            export HTTP_PROXY=$ALL_PROXY
+            export http_proxy=$ALL_PROXY
+            export HTTPS_PROXY=$ALL_PROXY
+            export https_proxy=$ALL_PROXY
 
-> 此方法仅为临时使用，退出 bash 后临时环境变量就会失效
-
-<!-- more -->
-
-## 2.使用脚本在登录 WSL 时自动执行
-
-新建脚本文件 `~/.set-wsl-proxy.sh`
-
-```bash
-#!/bin/bash  
-export http_proxy="socks5://127.0.0.1:10808"
-export https_proxy="socks5://127.0.0.1:10808"
+            if [ "`git config --global --get proxy.https`" != "$ALL_PROXY" ]; then
+                git config --global proxy.https $ALL_PROXY
+                git config --global proxy.http $ALL_PROXY
+            fi
+            ;;
+        stop)
+            unset HTTP_PROXY
+            unset http_proxy
+            unset HTTPS_PROXY
+            unset https_proxy
+            if [ "`git config --global --get proxy.https`" = "$ALL_PROXY" ]; then
+                git config --global --unset https.proxy
+                git config --global --unset http.proxy
+            fi
+            ;;
+        *)
+            echo "usage: source $0 start|stop"
+            ;;
+esac
 ```
 
 在 `~/.bashrc` 文件末尾新增一条命令
 
 ```bash
-echo 'source ~/.set-wsl-proxy.sh' >> ~/.bashrc
+echo 'alias proxy="source ~/.set-wsl2-proxy.sh"' >> ~/.bashrc
 ```
