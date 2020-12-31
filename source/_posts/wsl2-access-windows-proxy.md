@@ -1,10 +1,10 @@
 ---
-title: 设置 WSL 代理
+title: WSL2 访问 Windows 代理
 tags:
   - backup
 comments: true
 date: 2020-11-30 16:58:27
-updated: 2020-11-30 16:58:27
+updated: 2020-12-31 16:58:27
 ---
 
 ## 获取 WSL2 IP 地址
