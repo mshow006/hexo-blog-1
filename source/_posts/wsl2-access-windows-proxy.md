@@ -28,6 +28,8 @@ export HTTP_PROXY=$WIN_PROXY
 export HTTPS_PROXY=$WIN_PROXY
 ```
 
+<!-- more -->
+
 ## Windows 防火墙以及 v2ray 设置
 
 v2ray 默认情况下是不能通过防火墙的，需要允许 v2ray 通过 Windows 的防火墙，设置如图:
@@ -38,7 +40,7 @@ v2ray 默认情况下是不能通过防火墙的，需要允许 v2ray 通过 Win
 
 v2ray 必须开启**允许来自局域网的连接（connection from private net work）**
 
-![代理软件设置](https://i.loli.net/2020/11/30/vZ1EH96GKOnDQBI.png)
+![v2ray](https://i.loli.net/2020/11/30/vZ1EH96GKOnDQBI.png)
 
 现在可以通过 `curl www.google.com` 来测试代理，如果控制台有输出即为设置成功。
 
