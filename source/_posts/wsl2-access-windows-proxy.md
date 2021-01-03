@@ -44,36 +44,43 @@ v2ray 必须开启**允许来自局域网的连接（connection from private net
 
 现在可以通过 `curl www.google.com` 来测试代理是否生效，如果控制台有输出即为设置成功。
 
-最后附上一个脚本，可以通过 `proxy start | stop` 开启或者关闭代理。
+最后附上一个脚本，可以通过 `proxy start|stop|status` 开启、关闭或者检查代理。
 
 ```bash
 #!/bin/bash
 PROXY_PORT=10808
 WINDOWS_NAMESERVER=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
-WIN_PROXY=socks5://$WINDOWS_NAMESERVER:$PROXY_PORT
+ALL_PROXY=socks5://$WINDOWS_NAMESERVER:$PROXY_PORT
+GIT_HTTP_PROXY=`git config --global --get http.proxy`
+GIT_HTTPS_PROXY=`git config --global --get https.proxy`
 
 case $1 in
         start)
-            export HTTP_PROXY=$WIN_PROXY
-            export HTTPS_PROXY=$WIN_PROXY
+            export HTTP_PROXY=$ALL_PROXY
+            export HTTPS_PROXY=$ALL_PROXY
 
-            if [ "`git config --global --get proxy.https`" != "$WIN_PROXY" ]; then
-                git config --global proxy.https $WIN_PROXY
-                git config --global proxy.http $WIN_PROXY
+            if [ "`git config --global --get http.proxy`" != $ALL_PROXY ]; then
+                git config --global http.proxy $ALL_PROXY
+                git config --global https.proxy $ALL_PROXY
             fi
             ;;
         stop)
             unset HTTP_PROXY
-            unset http_proxy
             unset HTTPS_PROXY
-            unset https_proxy
-            if [ "`git config --global --get proxy.https`" = "$WIN_PROXY" ]; then
-                git config --global --unset https.proxy
+
+            if [ "`git config --global --get http.proxy`" = $ALL_PROXY ]; then
                 git config --global --unset http.proxy
+                git config --global --unset https.proxy
             fi
             ;;
+        status)
+            echo "HTTP_PROXY:" $HTTP_PROXY
+            echo "HTTPS_PROXY:" $HTTPS_PROXY
+            echo "GIT_HTTP_PROXY: `git config --global --get http.proxy`"
+            echo "GIT_HTTPS_PROXY: `git config --global --get https.proxy`"
+            ;;
         *)
-            echo "usage: source $0 start|stop"
+            echo "usage: source $0 start|stop|status"
             ;;
 esac
 ```
