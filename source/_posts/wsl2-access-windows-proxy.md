@@ -42,10 +42,9 @@ v2ray 必须开启**允许来自局域网的连接（connection from private net
 
 ![v2ray](https://i.loli.net/2020/11/30/vZ1EH96GKOnDQBI.png)
 
-现在可以通过 `curl www.google.com` 来测试代理，如果控制台有输出即为设置成功。
+现在可以通过 `curl www.google.com` 来测试代理是否生效，如果控制台有输出即为设置成功。
 
 最后附上一个脚本，可以通过 `proxy start | stop` 开启或者关闭代理。
-
 
 ```bash
 #!/bin/bash
@@ -79,8 +78,8 @@ case $1 in
 esac
 ```
 
-需要在 `~/.bashrc` 文件末尾新增一条命令
+使得命令生效的话还需要在 `~/.bashrc` 文件末尾新增一条命令(`~/.set-wsl2-proxy.sh` 表示脚本路径):
 
 ```bash
-'alias proxy="source ~/.set-wsl2-proxy.sh"'
+alias proxy="source ~/set-wsl2-proxy.sh"
 ```
