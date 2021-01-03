@@ -4,7 +4,7 @@ tags:
   - backup
 comments: true
 date: 2020-11-30 16:58:27
-updated: 2020-12-31 16:58:27
+updated: 2021-1-3 20:30:27
 ---
 
 ## 获取 WSL2 IP 地址
