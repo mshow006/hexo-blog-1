@@ -130,3 +130,6 @@ leancloud_counter_security:
   app_key: FnbaTROPb3OWVu3I2K9P3wF9
   username: <your username> # Will be asked while deploying if is left blank
   password: <your password> # Recommmended to be left blank. Will be asked while deploying if is left blank
+
+sitemap:
+  path: sitemap.xml
