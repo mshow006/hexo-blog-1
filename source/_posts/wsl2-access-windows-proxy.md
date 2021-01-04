@@ -90,3 +90,7 @@ esac
 ```bash
 alias proxy="source ~/set-wsl2-proxy.sh"
 ```
+
+参考:
+1. https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions#accessing-windows-networking-apps-from-linux-host-ip
+2. https://zinglix.xyz/2020/04/18/wsl2-proxy/
