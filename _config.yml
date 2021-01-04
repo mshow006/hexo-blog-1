@@ -17,8 +17,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-# url: https://yingming006.cn
-url: https://yingming006.github.io
+url: https://yingming006.cn
 root: /
 permalink: :title/
 permalink_defaults:
