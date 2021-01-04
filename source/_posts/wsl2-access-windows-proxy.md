@@ -1,10 +1,8 @@
 ---
 title: WSL2 访问 Windows 代理
-tags:
-  - backup
 comments: true
 date: 2020-11-30 16:58:27
-updated: 2021-1-3 20:30:27
+updated: 2021-1-4 20:30:27
 ---
 
 ## 获取 WSL2 IP 地址

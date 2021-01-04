@@ -1,7 +1,5 @@
 ---
 title: WIN10系统重装与常用软件安装
-tags:
-  - backup
 comments: true
 date: 2020-11-03 15:36:58
 updated: 2020-11-03 15:36:58

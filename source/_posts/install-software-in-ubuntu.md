@@ -1,7 +1,5 @@
 ---
 title: 在Ubuntu系统中安装常用软件
-tags:
-  - backup
 comments: true
 date: 2020-09-7 15:06:19
 updated: 2020-12-29 12:06:19

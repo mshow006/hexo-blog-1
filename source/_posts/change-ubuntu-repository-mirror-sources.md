@@ -2,8 +2,6 @@
 title: 更换Ubuntu镜像源
 date: 2020-09-6 21:12:08
 updated: 2020-09-17 21:12:08
-tags:
-  - backup
 comments: true
 ---
 
