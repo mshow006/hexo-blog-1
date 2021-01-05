@@ -164,6 +164,19 @@ deploy:
 
 运行命令 `hexo d` 即可发布到 GitHub Pages 上，稍等一会儿即可通过 username.github.io 访问。
 
+## NexT 主题配置
+
+### 自定义 Favicon
+
+```yml
+favicon:
+  small: /images/favicon-16x16-next.png                 
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo.svg
+  android_manifest: /images/manifest.json
+```
+
 
 TODO
 https://theme-next.js.org/docs/theme-settings/
