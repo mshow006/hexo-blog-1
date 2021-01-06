@@ -1,5 +1,5 @@
 ---
-title: 基于 Hexo + GitHub Pages 搭建个人博客 - 使用 NexT 主题
+title: 基于 Hexo + GitHub Pages 搭建个人博客
 date: 2020-04-01 00:31:13
 updated: 2020-04-01 00:31:13
 categories:
@@ -163,6 +163,121 @@ deploy:
 #### 部署
 
 运行命令 `hexo d` 即可发布到 GitHub Pages 上，稍等一会儿即可通过 username.github.io 访问。
+
+## NexT 主题配置
+
+### 侧边栏 Sidebar
+
+{% tabs position %}
+<!-- tab position -->
+设定侧边栏的位置，左侧或者右侧。
+```yml _config.next.yml
+sidebar:
+  position: left
+  #position: right
+```
+<!-- endtab -->
+
+<!-- tab width -->
+```yml _config.next.yml
+sidebar:
+  # width: 300
+```
+{% note info %}
+各模式默认宽度如下：
+- Muse | Mist : 320
+- Pisces | Gemini : 240
+{% endnote %}
+<!-- endtab -->
+
+<!-- tab display -->
+显示侧边栏的条件:
+```yml _config.next.yml
+sidebar:
+  display: post     # 仅在具有索引的文章中显示侧边栏
+  #display: always  # 所有页面都显示侧边栏
+  #display: hide    # 默认隐藏侧边栏，但是可以点击开启
+  #display: remove  # 删除侧边栏
+```
+<!-- endtab -->
+{% endtabs %}
+
+#### 头像 Avatar
+
+```yml _config.next.yml
+avatar:
+  url: /images/avatar.gif   # 根目录的 source 文件夹下（主题目录的 source 文件夹下）
+  rounded: true             # 圆形头像
+  rotated: true             # 当鼠标滑过时头像旋转
+```
+
+#### 社交链接
+
+严格遵循 `Key: /link/ || icon` 格式，icon 可以去 [Font Awesome](https://fontawesome.com/) 寻找。
+
+```yml _config.next.yml
+social:
+  GitHub: https://github.com/yourname || fab fa-github
+  E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+
+social_icons:
+  enable: true        # 显示 icon
+  icons_only: true    # 只显示 icon
+  transition: false   
+```
+
+#### 友情链接 Blogrolls
+
+```yml _config.next.yml
+links_settings:
+  icon: fa fa-globe
+  title: 友情链接     # 标题
+  # Available values: block | inline
+  layout: block
+
+links:
+  Title: https://example.com
+  Title2: https://example2.com
+```
+
+#### 大纲目录 TOC
+
+```yml _config.next.yml
+toc:
+  enable: true
+  # 自动添加序号
+  number: true
+  # 自动换行
+  wrap: true
+  # 是否全部展开，值为 false 的时候只显示当前所在位置
+  expand_all: false
+  # 最大层级深度
+  max_depth: 6
+```
+
+### 文章 Posts
+
+#### 预览 Preamble Text
+
+NexT 会在文章标记 `<!-- more -->` 的位截断，以次来控制预览内容。
+
+
+#### 文章源标记 Post Meta Display
+
+TODO
+https://theme-next.js.org/docs/theme-settings/posts.html#Post-Meta-Display
+
+
+
+
+
+
+
+
+
+
+---------------
+
 
 ## Hexo 使用分类、标签
 
