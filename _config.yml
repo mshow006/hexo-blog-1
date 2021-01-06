@@ -132,3 +132,16 @@ leancloud_counter_security:
 
 sitemap:
   path: sitemap.xml
+
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+# 压缩css  
+neat_css:
+  enable: true
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
