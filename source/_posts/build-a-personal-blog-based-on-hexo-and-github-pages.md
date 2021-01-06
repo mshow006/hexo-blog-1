@@ -1,5 +1,5 @@
 ---
-title: 基于 Hexo + GitHub Pages 搭建个人博客 - NexT 主题定制
+title: 基于 Hexo + GitHub Pages 搭建个人博客 - 使用 NexT 主题
 date: 2020-04-01 00:31:13
 updated: 2020-04-01 00:31:13
 categories:
@@ -163,41 +163,6 @@ deploy:
 #### 部署
 
 运行命令 `hexo d` 即可发布到 GitHub Pages 上，稍等一会儿即可通过 username.github.io 访问。
-
-## NexT 主题配置
-
-### 自定义 Favicon
-
-```yml
-favicon:
-  small: /images/favicon-16x16-next.png                 
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
-  android_manifest: /images/manifest.json
-```
-
-
-TODO
-https://theme-next.js.org/docs/theme-settings/
-
-
-
-
-
-
-
-
-
-
-
-根据文档，基本可以快速搭建一个 GitHub Pages 博客。
-
-这里有一篇比较详细的搭建博文：[通过 Hexo 搭建与使用个人博客](https://sspai.com/post/59337)
-
----------------
-
-本文主要记录一些不能直接从文档中获取的操作和配置。
 
 ## Hexo 使用分类、标签
 
