@@ -317,73 +317,94 @@ post_edit:
   url: https://github.com/user-name/repo-name/edit/master/source/ # 补充上 url 即可实现在线编辑文章功能
 ```
 
-https://theme-next.js.org/docs/theme-settings/posts.html#Post-Meta-Display
+### 自定义页面 Custom Pages
 
-
-
-
-
-
-
-
-
-
----------------
-
-
-## Hexo 使用分类、标签
-
-创建分类、标签
+#### 创建 标签
 ```bash
-hexo new page categories
 heox new page tags
 ```
-编辑 `source/categories/index.md` 和 `source/tags/index.md`
+
+编辑 `source/tags/index.md`
+
 ```
----
-title: categories
-date: 2020-04-01 00:30:43
-type: categories
----
-```
-```
----
 title: tags
 date: 2020-04-01 00:30:50
 type: tags
 ---
 ```
 
-使用分类和标签
+添加到菜单栏
+
+```yml _config.next.yml
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  tags: /tags/ || fa fa-tags
+```
+
+使用标签，新建一篇测试文章
+
 ```bash
-# 新建一篇测试文章
 hexo new test
 ```
 
 编辑 `source/_post/test.md`
+
+{% tabs tags %}
+<!-- tab 格式1 -->
 ```
----
 title: test
-date: 2020-04-01 01:39:47
-categories:
-- Cate
 tags:
 - tag1
 - tag2
 ---
 ```
+<!-- endtab -->
 
-保存后，`test` 文章的分类是 `Cate`，标签是 `tag1`、`tag2`。
+<!-- tab 格式2 -->
+```
+title: test
+tags: [Testing, Another Tag]
+---
+```
+<!-- endtab -->
+{% endtabs %}
 
-Hexo 支持同级分类，也支持多级分类。[http://suo.im/5FC3qI](https://hexo.io/zh-cn/docs/front-matter.html#comment-4006970676)
+> **注意缩进**
 
-[浅谈博客文章的两种分类方式](https://io-oi.me/tech/categories+tags/)
+#### 公益 404 页面
 
-## 将博客收录到谷歌、百度
+在站点根目录下新建 404 页面
+```bash
+hexo new page 404
+```
 
-### Google Webmaster
+编辑 `_posts/404/index.md`
 
-#### 1. 添加资源
+```md
+---
+title: '404'
+comments: false
+---
+<script src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
+        charset="utf-8" homePageUrl="/" homePageName="Back to home">
+</script>
+```
+
+添加 公益 404 页面到菜单栏
+
+```yml
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  commonweal: /404/ || fa fa-heartbeat
+```
+
+### SEO
+
+#### 谷歌收录
+
+##### 1. 添加资源
 
 打开 [Google Webmaster](https://www.google.com/webmasters)，登录，添加资源，选择*网址前缀*输入博客地址；
 
@@ -391,7 +412,7 @@ Hexo 支持同级分类，也支持多级分类。[http://suo.im/5FC3qI](https:/
 
 - 复制 meta 标签中的 `content` 值，添加到`Next Config` 中的`google_site_verification` 即可。
 
-#### 2.提交 sitemap.xml
+##### 2.提交 sitemap.xml
 
 首先安装插件 `hexo-generator-sitemap`
 
@@ -403,16 +424,24 @@ npm install hexo-generator-sitemap --save
 
 在刚刚的网站左侧点击站点地图，输入站点地图网址 `https://your-blog-url/sitemap.xml`，提交即可。
 
-### Baidu Webmaster
+#### 百度收录
 
-#### 1. 添加资源
+##### 1. 添加资源
 
 打开[Baidu Webmaster](https://ziyuan.baidu.com/site)，登录，点击`添加网站`，按步骤选择，在验证网址时选择`HTML 标签验证`，复制 `meta` 标签中的 `content` 值，添加到`Next Config` 中的`baidu_site_verification` 即可。
 
-#### 2.提交 sitemap.xml
+##### 2.提交 sitemap.xml
 
 在网站左侧点击`链接提交`，选择`sitmap`提交，输入站点地图网址 `https://your-blog-url/sitemap.xml`即可。
 
 ### Other Webmaster
 
-其它网站模仿上述方法添加即可。
+https://theme-next.js.org/docs/theme-settings/seo.html#Webmaster-Tools
+
+## 第三方服务
+
+### 评论系统
+
+### 统计与分析
+
+### 本地搜索
