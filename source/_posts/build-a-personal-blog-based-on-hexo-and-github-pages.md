@@ -262,9 +262,61 @@ toc:
 NexT 会在文章标记 `<!-- more -->` 的位截断，以次来控制预览内容。
 
 
-#### 文章源标记 Post Meta Display
+#### 文章显示标记 Post Meta Display
 
-TODO
+NexT 默认支持文章的创建日期、更新日期、和文章分类显示。
+
+> 如果想要文章禁止显示标记信息，需要设置
+
+```yml _config.next.yml
+post_meta:
+  item_text: true       # 设置为 false 可以禁用标记信息
+  created_at: true      
+  updated_at:
+    enable: true        # 开启更新时间，需要设置站点根目录下 _config.yml 的 use_date_for_updated 格式 https://hexo.io/docs/configuration#Date-Time-format
+    another_day: true
+  categories: true
+```
+
+开启 `post_meta.updated_at` 选项，需要设置站点根目录下 _config.yml 的 use_date_for_updated 格式，https://hexo.io/docs/configuration#Date-Time-format
+
+如果 `post_meta.another_day` 设置为 `true`，当创建时间和更新时间在同一天的时候，不显示更新时。
+
+#### 文章字数统计 Post Wordcount
+
+首先需要在站点根目录下安装 `hexo-word-counter`:
+
+```bash
+npm install hexo-word-counter
+```
+
+#### 相关热门文章 Related Popular Posts
+
+安装 `hexo-related-popular-posts` : `npm install hexo-related-popular-posts`
+
+```yml _config.next.yml
+related_posts:
+  enable: true
+  title:                  # 自定义标题，保留为空以使用默认标题
+  display_in_home: false  # 首页显示
+  params:
+    maxCount: 5           # 最大相关文章数目
+    #PPMixingRate: 0.0    # 热门文章和相关文章的混合比例
+    #isDate: false        # 设置为 ture 表示显示文章日期
+    #isImage: false       # 设置为 ture 表示显示文章缩略图
+    #isExcerpt: false     # 设置为 ture 表示显示文章摘要
+```
+
+#### 在线编辑 Post Edit
+
+开启 `post_edit` 选项可以事项在线编辑文章功能（跳转到GitHub的博客源代码）
+
+```yml _config.next.yml
+post_edit:
+  enable: true
+  url: https://github.com/user-name/repo-name/edit/master/source/ # 补充上 url 即可实现在线编辑文章功能
+```
+
 https://theme-next.js.org/docs/theme-settings/posts.html#Post-Meta-Display
 
 

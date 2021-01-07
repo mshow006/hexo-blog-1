@@ -166,10 +166,7 @@ links_settings:
   layout: inline
 
 links:
-  TitleTitle: https://example.com
-  example: https://example.com
-  inline: https://example.com
-  linkslinks: https://example.com
+  # Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -301,8 +298,9 @@ related_posts:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
-  enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source
+  enable: true
+  url: https://github.com/yingming006/hexo-blog/edit/master/source/
+  # url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
