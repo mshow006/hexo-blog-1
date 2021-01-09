@@ -86,6 +86,7 @@ menu:
   tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive
   一句: /sayings || fa fa-list
+  工具书: /reference-books || fa fa-book
   # about: /about/ || fa fa-user
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
@@ -798,7 +799,7 @@ tabs:
 # So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # Dependencies: https://github.com/next-theme/theme-next-pdf
 pdf:
-  enable: false
+  enable: true
   # Default height
   height: 500px
 
