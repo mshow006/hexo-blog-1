@@ -9,10 +9,6 @@ date: 2021-01-08 11:17:44
 updated: 2021-01-08 11:17:44
 ---
 
-## SpringBoot 介绍
+除了使用 IDE 创建 SpringBoot 项目外，还可以通过 https://start.spring.io 来创建 SpringBoot 项目。
 
-SpringBoot 是为了简化 Spring 应用的初始搭建和开发过程而提出的轻量级框架，主要特性有：
-
-- 独立的 Spring 应用程序
-- 嵌入式的 Tomcat、Jetty
-- Starters自动依赖与版本控制
+## start.spring.io
