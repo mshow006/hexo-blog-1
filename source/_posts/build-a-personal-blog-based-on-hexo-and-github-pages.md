@@ -142,7 +142,7 @@ cp node_modules/hexo-theme-next/_config.yml _config.next.yml
 
 准备:
 
-- 一个和 GitHub 用户名同名的 username.github.io 的公开仓库
+- 一个和 GitHub 用户名同名的 yingming006.github.io 的公开仓库
 - [新增 SSH 密钥到 GitHub 帐户](https://docs.github.com/cn/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 #### 安装 `hexo-deployer-git` 
@@ -156,13 +156,27 @@ sudo npm install hexo-deployer-git --save
 ```
 deploy:
   type: git
-  repository: git@github.com:username/username.github.io.git
+  repository: git@github.com:yingming006/yingming006.github.io.git
   branch: master
 ```
 
-#### 部署
+#### 发布
 
 运行命令 `hexo d` 即可发布到 GitHub Pages 上，稍等一会儿即可通过 username.github.io 访问。
+
+### 部署到个人服务器
+
+### 服务器环境搭建
+
+因为 `Hexo` 是静态博客，所以只需要 `Nginx` 即可。
+
+```bash
+sudo apt install nginx
+```
+
+安装完成后，打开网页看到的会是`Nginx`的默认网页。
+
+> 如果没有显示，尝试配置安全组，开放 80 端口，或者运行命令 `sudo systemctl restart nginx` 重启 Nginx 服务
 
 ## NexT 主题配置
 

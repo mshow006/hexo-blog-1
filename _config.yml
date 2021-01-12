@@ -19,6 +19,7 @@ timezone: Asia/Shanghai
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://yingming006.cn
+# url: https://yingming006.github.io
 root: /
 permalink: :title/
 permalink_defaults:
@@ -114,9 +115,9 @@ deploy:
 - type: git
   repo: git@github.com:yingming006/yingming006.github.io.git
   branch: master
-# - type: git
-#   repo: git@github.com:yingming006/hexo-blog
-#   branch: master
+- type: git
+  repo: git@yingming006.cn:/home/git/repositories/hexo-blog.git
+  branch: master
 
 search:
   path: search.xml
