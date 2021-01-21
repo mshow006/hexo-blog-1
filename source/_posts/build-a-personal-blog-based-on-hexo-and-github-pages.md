@@ -1,7 +1,7 @@
 ---
 title: 基于 Hexo + GitHub Pages 搭建个人博客
 date: 2020-04-01 00:31:13
-updated: 2020-04-01 00:31:13
+updated: 2021-01-21 00:20:13
 categories:
  - Hexo
 tags:
@@ -166,7 +166,7 @@ deploy:
 
 ### 部署到个人服务器
 
-### 服务器环境搭建
+#### 配置 Nginx
 
 因为 `Hexo` 是静态博客，所以只需要 `Nginx` 即可。
 
@@ -174,9 +174,81 @@ deploy:
 sudo apt install nginx
 ```
 
-安装完成后，打开网页看到的会是`Nginx`的默认网页。
+安装完成后，打开网页看到的会是`Nginx`的欢迎页面。
 
 > 如果没有显示，尝试配置安全组，开放 80 端口，或者运行命令 `sudo systemctl restart nginx` 重启 Nginx 服务
+
+Nginx 默认站点指向了 `/var/www/html` 目录下的 `index.nginx-debian.html`，我们的目标是让 Nginx 指向博客站点目录下的 `index.html`。
+
+- 首先在 `/var/www/html` 文件夹下创建存放博客源文件的目录：`/var/www/yingming006.cn`;
+- 在 `/etc/nginx/sites-available` 文件夹下创建 `Nginx` 的配置文件：`yingming006.cn`
+- 创建软连接 `/etc/nginx/sites-enabled/yingming006.cn`
+- 删除`/etc/nginx/sites-enabled/default` 文件并重新启动 `Nginx` 即可。
+
+```bash
+sudo mkdir -p /var/www/yingming006.cn
+sudo touch /etc/nginx/sites-available/yingming006.cn
+sudo ln -s /etc/nginx/sites-available/yingming006.cn /etc/nginx/sites-enabled/yingming006.cn
+sudo rm /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx
+```
+
+`/etc/nginx/sites-available/yingming006.cn` 配置文件参考`default`内容修改如下：
+
+```txt /etc/nginx/sites-available/yingming006.cn
+server {
+    listen 80;
+    server_name yingming006.cn;
+
+    root /var/www/yingming006.cn;
+
+    index index.html index.htm;
+
+    location / {
+	    try_files $uri $uri/ =404;
+    }
+}
+```
+
+#### 配置 Git
+
+网站的源文件通过`Git`进行版本管理，每一次更新源文件之后，可以通过`Git`的`hook`操作自动更新到`/var/www/yingming006.cn`的目录下。因此，我们需要在服务器上面搭建一个自己的`Git`服务器，具体的操作如下：
+
+- 创建`Git`用户，并且授予其sudo权限
+
+    ```bash
+     sudo adduser git
+     sudo usermod -aG sudo git
+    ```
+
+- 以 `Git` 用户重新登录服务器，在 `/home/git` 文件夹下创建 `repositories` 目录，专门用作`Git`服务器放置repo的地方。
+
+    ```
+    git@computer_name:~$ git init --bare repositories/hexo-blog.git
+    Initialized empty Git repository in /home/git/repositories/hexo-blog.git/
+    ```
+
+- 之后就可以在本地把刚刚创建好的 `hexo-blog` 克隆下来，为了避免每次验证需要输入密码，可以使用命令 :
+
+    ```bash
+    ssh-copy-id git@yingming006.cn
+    
+    git clone git@yingming006.cn:/home/git/repositories/hexo-blog.git
+    ```
+
+- 使用 `Git` 的 `hook`，创建文件：`touch /home/git/repositories/hexo-blog.git/hooks/post-receive` ，添加以下内容：
+
+    ```txt post-receive
+    git --work-tree=/var/www/houmin.cc --git-dir=/home/git/repositories/blog.git checkout -f
+    ```
+
+    赋予执行权限：`chmod +x /home/git/repositories/hexo-blog.git/hooks/post-receive`
+
+    关联`git`用户：`sudo chown -R git:git /var/www/yingming006.cn`
+
+经过上述操作，当 `hexo-blog` 更新时，就会自动复制到 `/var/www/yingming006.cn` 文件夹下。
+
+现在，重新访问下 `yingming006.cn`，如果没有出错的话，就可以看到博客了。
 
 ## NexT 主题配置
 
@@ -185,6 +257,7 @@ sudo apt install nginx
 {% tabs position %}
 <!-- tab position -->
 设定侧边栏的位置，左侧或者右侧。
+
 ```yml _config.next.yml
 sidebar:
   position: left
