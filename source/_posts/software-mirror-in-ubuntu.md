@@ -3,6 +3,8 @@ title: Ubuntu的软件源配置和管理工具
 comments: true
 date: 2020-11-02 16:29:51
 updated: 2020-11-02 16:29:51
+categories:
+ - tech
 ---
 
 ## Node.js

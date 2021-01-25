@@ -1,5 +1,7 @@
 ---
 title: 排序算法-Java实现
+categories:
+ - tech
 tags:
   - sort
 comments: true

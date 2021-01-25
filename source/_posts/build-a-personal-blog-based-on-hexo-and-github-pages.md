@@ -3,7 +3,7 @@ title: 基于 Hexo + GitHub Pages 搭建个人博客
 date: 2020-04-01 00:31:13
 updated: 2021-01-21 00:20:13
 categories:
- - Hexo
+ - tech
 tags:
  - Hexo
  - NexT

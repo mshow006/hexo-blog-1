@@ -37,7 +37,7 @@ custom_file_path:
 
 # Schemes
 # scheme: Muse
-#scheme: Mist
+# scheme: Mist
 #scheme: Pisces
 scheme: Gemini
 
@@ -82,19 +82,21 @@ creative_commons:
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  categories: /categories/ || fa fa-th
+  # categories: /categories/ || fa fa-th
+  生活: /categories/life/ || fa fa-tools
+  技术: /categories/tech/ || fa fa-tools
   tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive
-  一句: /sayings || fa fa-list
-  工具书: /reference-books || fa fa-book
+  # 一句: /sayings || fa fa-list
+  # 工具书: /reference-books || fa fa-book
   # about: /about/ || fa fa-user
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
-  commonweal: /404 || fa fa-heartbeat
+  # commonweal: /404 || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
-  icons: true
+  icons: false
   badges: false
 
 
@@ -217,14 +219,14 @@ footer:
   copyright: yingming006
 
   # Powered by Hexo & NexT
-  powered: false
+  powered: true
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 鲁ICP备18024573号
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 
     # The full num of gongan beian.
     gongan_num:
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
@@ -394,7 +396,7 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: true
+  enable: false
   permalink: https://github.com/yingming006
   title: Follow me on GitHub
 

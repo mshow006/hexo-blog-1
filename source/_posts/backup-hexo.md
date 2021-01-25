@@ -1,7 +1,7 @@
 ---
 title: 备份 Hexo 博客(精简版)
 categories:
- - Hexo
+ - tech
 tags:
  - Hexo
  - Next

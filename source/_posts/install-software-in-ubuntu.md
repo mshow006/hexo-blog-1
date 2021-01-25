@@ -3,6 +3,8 @@ title: 在Ubuntu系统中安装常用软件
 comments: true
 date: 2020-09-7 15:06:19
 updated: 2020-12-29 12:06:19
+categories:
+ - tech
 ---
 > 在进行软件安装命令`apt`前，尽可能的进行一次更新操作：
 >
