@@ -22,6 +22,8 @@ Java 中的 List 集合，使用寻常的 `for` 循环进行遍历时删除操�
 
 ## Collection#removeAll()
 
+<!-- more -->
+
 利用 `Collection#removeAll()` 方法，先找到要删除的对象，在完成迭代后进行删除。
 
 ```java
