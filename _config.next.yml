@@ -146,8 +146,8 @@ site_state: true
 social:
   CSDN: https://blog.csdn.net/MShow006 || fa fa-fire
   GitHub: https://github.com/yingming006 || fab fa-github
-  RSS: /atom.xml || fa fa-rss
   E-Mail: mailto:yingming006@foxmail.com || fa fa-envelope
+  RSS: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -160,7 +160,7 @@ social:
 social_icons:
   enable: true
   icons_only: false
-  transition: false
+  transition: true
 
 # Blog rolls
 links_settings:
