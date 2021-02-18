@@ -144,6 +144,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
+  CSDN: https://blog.csdn.net/MShow006 || fa fa-fire
   GitHub: https://github.com/yingming006 || fab fa-github
   RSS: /atom.xml || fa fa-rss
   E-Mail: mailto:yingming006@foxmail.com || fa fa-envelope
@@ -158,7 +159,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: true
+  icons_only: false
   transition: false
 
 # Blog rolls
