@@ -82,9 +82,9 @@ creative_commons:
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  # categories: /categories/ || fa fa-th
-  生活: /categories/life/ || fa fa-tools
-  技术: /categories/tech/ || fa fa-tools
+  categories: /categories/ || fa fa-th
+  # 生活: /categories/life/ || fa fa-tools
+  # 技术: /categories/tech/ || fa fa-tools
   tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive
   # 一句: /sayings || fa fa-list
@@ -130,7 +130,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/avatar.webp
+  url: /images/kid.webp
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -217,7 +217,7 @@ footer:
     color: "#ff0000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright: yingming006
+  copyright: Yingming
 
   # Powered by Hexo & NexT
   powered: true
