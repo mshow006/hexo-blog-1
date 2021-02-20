@@ -570,7 +570,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
-  active: valine gitalk
+  active: valine
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -579,10 +579,10 @@ comments:
   nav:
     valine:
      text: Valine
-     order: 1
+     order: -2
     gitalk:
      text: Gitalk
-     order: 2
+     order: -1
 
 # Disqus
 disqus:
