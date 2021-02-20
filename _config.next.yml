@@ -570,18 +570,19 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
-  active:
+  active: valine gitalk
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true
   # Modify texts or order for any navs, here are some examples.
   nav:
-    #disqus:
-    #  text: Load Disqus
-    #  order: -1
-    #gitalk:
-    #  order: -2
+    valine:
+     text: Valine
+     order: 1
+    gitalk:
+     text: Gitalk
+     order: 2
 
 # Disqus
 disqus:
@@ -634,7 +635,7 @@ valine:
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
+  enable: true
   github_id: yingming006
   repo: gitalk-hexo-blog
   client_id: 53230e90ef84fc880a89
