@@ -6,7 +6,6 @@ categories:
  - tech
 tags:
  - Hexo
- - NexT
 comments: true
 ---
 

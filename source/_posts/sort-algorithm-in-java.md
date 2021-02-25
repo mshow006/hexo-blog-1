@@ -3,7 +3,7 @@ title: 排序算法-Java实现
 categories:
  - tech
 tags:
-  - sort
+  - algorithm
 comments: true
 date: 2020-11-09 13:37:17
 updated: 2020-11-09 13:37:17

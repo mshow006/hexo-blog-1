@@ -2,6 +2,8 @@
 title: WSL2 访问 Windows 代理
 categories:
  - tech
+tags:
+ - wsl
 comments: true
 date: 2020-11-30 16:58:27
 updated: 2021-1-4 20:30:27
