@@ -37,9 +37,10 @@ UltrISO 使用步骤：
 - “启动” - “写入硬盘镜像”
 - 写入方式：“USB-HDD+”，“写入”，等待写入完成
 
-### WIN10系统激活
 
-[沧水的*KMS激活*服务](https://www.dogedoge.com/rd/i%2BUckQiSGIwLH2Uth2XLds6ZA1upwanaE%2FYVyxx6GH0%3D)
+~~### WIN10系统激活~~ 
+
+~~[沧水的*KMS激活*服务](https://www.dogedoge.com/rd/i%2BUckQiSGIwLH2Uth2XLds6ZA1upwanaE%2FYVyxx6GH0%3D)~~
 
 ## 系统设置
 
