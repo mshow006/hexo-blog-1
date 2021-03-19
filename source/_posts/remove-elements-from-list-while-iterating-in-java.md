@@ -6,7 +6,7 @@ tags:
   - java-collection
 comments: true
 date: 2021-01-25 16:07:29
-updated: 2021-03-19 12:07:20
+updated: 2021-03-19 12:07:29
 ---
 
 Java 中的 List 集合，使用寻常的 `for` 循环进行遍历时删除操作时会引起 `ConcurrentModificationException` 异常，本文主要记录一下避免引起异常的方法。
