@@ -1,5 +1,5 @@
 ---
-title: [译]如何在Ubuntu 18.04上安装Java
+title: 【译】如何在Ubuntu 18.04上安装Java
 categories:
   - tech
 tags:
