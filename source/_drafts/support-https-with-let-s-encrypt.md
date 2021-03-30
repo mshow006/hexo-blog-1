@@ -25,3 +25,19 @@ updated: 2021-03-30 11:55:05
 sudo apt update
 sudo apt install certbot
 ```
+
+## 创建强 DH（Diffie-Hellman） 组
+
+Diffie-Hellman 密钥交换（DH）是一种在不安全的通信通道上安全地交换加密密钥的方法。
+
+生成一组新的 2048 位 DH :
+
+```bash
+sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+```
+
+也可以生成 4096 位的密钥长度，不过生成时间可能会过长，这取决于系统熵（system entropy）
+
+## 获取 Let's Encrypt 证书
+
+获取证书可以使用 webroot 插件，
