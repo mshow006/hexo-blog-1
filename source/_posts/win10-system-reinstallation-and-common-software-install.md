@@ -56,6 +56,7 @@ UltrISO 使用步骤：
 - [Ubuntut](https://www.microsoft.com/zh-cn/p/ubuntu/9nblggh4msv6)
 - [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701)
 - [Snipaste](https://www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx)
+- [EarTrumpet](https://eartrumpet.app/)
 - 电视（更换香港地区下载）
 - 爱壁纸
 
