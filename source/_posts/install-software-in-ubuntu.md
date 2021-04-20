@@ -106,7 +106,7 @@ categories:
 - 更新
 
     ```bash
-    npm install npm@latest -g
+    sudo npm install npm@latest -g
     ```
 
 >  关于 npm 的换源请看下一篇文章：
@@ -191,7 +191,7 @@ docker-compose --version
 命令帮助工具
 
 ```bash
-npm install -g tldr
+sudo npm install -g tldr
 ```
 
 ### neofetch
@@ -237,7 +237,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-`.bashrc` 文件修改如下
+`.zshrc` 文件修改如下
 
 ```
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
