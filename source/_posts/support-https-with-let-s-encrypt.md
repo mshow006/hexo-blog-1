@@ -104,10 +104,10 @@ server {
 }
 ```
 
-将 `/etc/nginx/sites-available/yingming006.cn.conf` 链接到 `/etc/nginx/sites-enabled/`
+将 `/etc/nginx/sites-available/yingming006.cn` 链接到 `/etc/nginx/sites-enabled/`
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/yingming006.cn.conf /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/yingming006.cn /etc/nginx/sites-enabled/
 ```
 
 重启 Nginx， 使配置生效
@@ -119,7 +119,7 @@ sudo systemctl restart nginx
 获取 SSL 证书
 
 ```bash
-sudo certbot certonly --agree-tos --email yingming006@foxmail.com --webroot -w /var/lib/letsencrypt/ -d yingming006.cn -d www.yingming006.cn
+sudo certbot certonly --agree-tos --email yingming006@foxmail.com --webroot -w /var/lib/letsencrypt/ -d yingming006.cn
 ```
 
 如果成功，则控制台将打印以下消息
@@ -145,16 +145,16 @@ IMPORTANT NOTES:
    Donating to EFF:                    https://eff.org/donate-le
 ```
 
-证书获取后，编辑 `/etc/nginx/sites-available/yingming006.cn.conf`
+证书获取后，编辑 `/etc/nginx/sites-available/yingming006.cn`
 
 ```bash
-sudo vim /etc/nginx/sites-available/yingming006.cn.conf
+sudo vim /etc/nginx/sites-available/yingming006.cn
 ```
 
-```txt /etc/nginx/sites-available/yingming006.cn.conf
+```txt /etc/nginx/sites-available/yingming006.cn
 server {
     listen 80;
-    server_name www.yingming006.cn yingming006.cn;
+    server_name yingming006.cn;
 
     include snippets/letsencrypt.conf;
     return 301 https://$host$request_uri;
