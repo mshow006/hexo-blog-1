@@ -18,6 +18,8 @@ updated: 2021-06-29 09:05:43
 
 1. 下载 [docker-compose.yml](https://github.com/HenryQW/Awesome-TTRSS/blob/main/docker-compose.yml) 至任意目录。
 
+<!-- more -->
+
 ```bash
 mkdir ttrss && cd ttrss
 wget https://github.com/HenryQW/Awesome-TTRSS/blob/main/docker-compose.yml
