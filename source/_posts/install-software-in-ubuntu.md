@@ -148,38 +148,35 @@ categories:
 
 ### Docker
 
-- 安装程序所需依赖，导入GPG密钥，将Docker APT存储库添加到系统中
+[DaoCloud](http://get.daocloud.io/#install-docker)
 
-    ```bash
-    sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-    ```
-
-    ```bash
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    ```
-
-    ```bash
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    ```
-
-- 安装
-
-    ```bash
-    sudo apt install docker-ce docker-ce-cli containerd.io
-    ```
+```bash
+curl -sSL https://get.daocloud.io/docker | sh
+```
 
 ```bash
 docker --version
 ```
 
-### Docker Composer
+卸载
+```bash
+sudo apt-get remove docker docker-engine
+```
+
+> 卸载Docker后,/var/lib/docker/目录下会保留原Docker的镜像,网络,存储卷等文件. 如果需要全新安装Docker,需要删除/var/lib/docker/目录
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+rm -fr /var/lib/docker/
+```
+
+### Docker Compose
+
+```bash
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 ```
 
 ```bash
-sudo chmod +x /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
 ```bash
