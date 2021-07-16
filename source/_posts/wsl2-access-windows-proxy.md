@@ -13,7 +13,7 @@ updated: 2021-1-4 20:30:27
 
 在 WSL2 中，要访问 Windows 上运行的网络应用（例如在 Windows 上运行的代理软件、SQL 服务器等），需要使用 WSL2 的 IP 地址，而不是 `localhost`。
 
-WSL2 的 IP 地址保存在 `/etc/resolv.conf` 文件中的 `nameserver`，可以通过一下命令获取：
+WSL2 的 IP 地址保存在 `/etc/resolv.conf` 文件中的 `nameserver`，可以通过以下命令获取：
 
 ```bash
 cat /etc/resolv.conf|grep nameserver|awk '{print $2}'
