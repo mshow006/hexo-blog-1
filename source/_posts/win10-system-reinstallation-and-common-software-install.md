@@ -22,7 +22,7 @@ updated: 2020-11-03 15:36:58
 需要 win10 专业版的镜像，下载途径：
 
 - 正版软件管理和服务平台（大学正版软件平台，推荐）
-- [ITELLYOU](https://next.itellyou.cn/) （提供原版软件）
+- [ITELLYOU](https://next.itellyou.cn/) （提供原版镜像）
 - [IT之家-WIN10系统下载](https://win10.ithome.com/win10xiazai)
 
 U盘启动盘制作软件：[Rufus](https://rufus.ie/)、[UltrISO](https://cn.ultraiso.net/)
