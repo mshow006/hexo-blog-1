@@ -639,8 +639,8 @@ gitalk:
   enable: true
   github_id: yingming006
   repo: gitalk-hexo-blog
-  client_id: 53230e90ef84fc880a89
-  client_secret: f7b47370d91a7d7cb372deaa129fd58c34d9b397
+  client_id: ce0444e36021187207af
+  client_secret: 903fe1c68120349c12e5606537a6f9fe559da61f
   admin_user: yingming006
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
