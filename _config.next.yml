@@ -581,9 +581,9 @@ comments:
     valine:
      text: Valine
      order: -2
-    gitalk:
-     text: Gitalk
-     order: -1
+    # gitalk:
+     # text: Gitalk
+     # order: -1
 
 # Disqus
 disqus:
