@@ -108,8 +108,12 @@ categories:
     ```bash
     sudo npm install npm@latest -g
     ```
+- 通过 NodeSource 安装
 
->  关于 npm 的换源请看下一篇文章：
+```
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt install nodejs
+```
 
 ### Yarn
 

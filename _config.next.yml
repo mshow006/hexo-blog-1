@@ -580,7 +580,7 @@ comments:
   nav:
     valine:
      text: Valine
-     order: -2
+     # order: -2
     # gitalk:
      # text: Gitalk
      # order: -1
@@ -636,7 +636,7 @@ valine:
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
+  enable: false
   github_id: yingming006
   repo: gitalk-hexo-blog
   client_id: ce0444e36021187207af

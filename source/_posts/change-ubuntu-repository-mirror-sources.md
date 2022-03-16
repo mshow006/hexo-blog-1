@@ -1,5 +1,5 @@
 ---
-title: 更换Ubuntu镜像源
+title: 更换 Ubuntu 镜像源
 date: 2020-09-6 21:12:08
 updated: 2020-09-17 21:12:08
 categories:
@@ -9,19 +9,25 @@ comments: true
 
 - 备份 `/etc/apt/sources.list` 文件
 
-    ```bash
-    sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 
-    ```
+```bash
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 
+```
 
-- 替换 `/etc/apt/sources.list` 文件
+- 修改 `/etc/apt/sources.list` 文件
 
-    根据下方列出的配置内容，进行全文替换即可
+替换为阿里源，将`http://archive.ubuntu.com`和`http://security.ubuntu.com`替换成`http://mirrors.aliyun.com`
+可以参考如下命令：
+
+```
+sudo sed -i "s@http://.*archive.ubuntu.com@http://mirrors.aliyun.com@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@http://mirrors.aliyun.com@g" /etc/apt/sources.list
+```
     
-- 更新软件源
+- 更新软件源索引
 
-    ```bash
-    sudo apt-get update
-    ```
+```bash
+sudo apt-get update
+```
 
 <!-- more -->
 
@@ -29,45 +35,43 @@ comments: true
 
 [官方文档](https://developer.aliyun.com/mirror/ubuntu)
 
-- ubuntu 20.04(focal) 
+```
+sudo sed -i "s@http://.*archive.ubuntu.com@http://mirrors.aliyun.com@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@http://mirrors.aliyun.com@g" /etc/apt/sources.list
+```
+
+### 华为源
+
+[官方文档](https://mirrors.huaweicloud.com/home)
 
 ```
-deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list
 ```
 
 ### 清华源
 
 [官方文档](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 
-- ubuntu 20.04(focal) 
-
 ```
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-
-# 预发布软件源，不建议启用
-# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+sudo sed -i "s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 ```
 
-> 阿里和清华的镜像源应该是使用最多的了，其他的例如腾讯源、网易源、华为源可自行解决，在此不做记录。
+### 腾讯源
+
+[官方文档](https://mirrors.cloud.tencent.com/help/ubuntu.html)
+
+```
+sudo sed -i "s@http://.*archive.ubuntu.com@http://mirrors.cloud.tencent.com@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@http://mirrors.cloud.tencent.com@g" /etc/apt/sources.list
+```
+
+### 网易源
+
+[官方文档](https://mirrors.cloud.tencent.com/help/ubuntu.html)
+
+```
+sudo sed -i "s@http://.*archive.ubuntu.com@http://mirrors.163.com@g" /etc/apt/sources.list
+sudo sed -i "s@http://.*security.ubuntu.com@http://mirrors.163.com@g" /etc/apt/sources.list
+```
