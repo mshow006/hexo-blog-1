@@ -11,7 +11,7 @@ updated: 2022-03-17 13:58:14
 
 ### 不分类别获取壁纸接口
 
-url: `http://service.picasso.adesk.com/v1/vertical/vertical`
+url: `http://service.aibizhi.adesk.com/v1/vertical/vertical`
 
 - skip：略过数量
 - limit：返回数量
@@ -19,7 +19,7 @@ url: `http://service.picasso.adesk.com/v1/vertical/vertical`
 - adult：布尔值
 - first：起始位置
 
-url 示例：`http://service.picasso.adesk.com/v1/vertical/vertical?limit=30&skip=180&adult=false&first=0&order=hot`
+url 示例：`http://service.aibizhi.adesk.com/v1/vertical/vertical?limit=30&skip=180&adult=false&first=0&order=hot`
 
 <!-- more -->
 
@@ -80,12 +80,12 @@ url 示例：`http://service.picasso.adesk.com/v1/vertical/vertical?limit=30&ski
 
 ### 获取手机壁纸类别
 
-url：`http://service.picasso.adesk.com/v1/vertical/category`
+url：`http://service.aibizhi.adesk.com/v1/vertical/category`
 
 adult：布尔值
 first：起始位置
 
-url 示例：`http://service.picasso.adesk.com/v1/vertical/category?adult=false&first=1`
+url 示例：`http://service.aibizhi.adesk.com/v1/vertical/category?adult=false&first=1`
 
 ```json
 {
@@ -329,12 +329,12 @@ url 示例：`http://service.picasso.adesk.com/v1/vertical/category?adult=false&
 
 ### 获取某类手机壁纸下壁纸
 
-url：`http://service.picasso.adesk.com/v1/vertical/category/{类别ID}`
+url：`http://service.aibizhi.adesk.com/v1/vertical/category/{类别ID}`
 
 拼接参数与解析均与手机壁纸接口一致
 
 url 示例：
-`http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000003/vertical?limit=30&adult=false&first=1&order=new`
+`http://service.aibizhi.adesk.com/v1/vertical/category/4e4d610cdf714d2966000003/vertical?limit=30&adult=false&first=1&order=new`
 
 
 ### 下载手机壁纸
@@ -343,7 +343,7 @@ url：`http://img5.adesk.com/{壁纸ID}`
 
 ### 获取电脑壁纸类别
 
-url：`http://service.picasso.adesk.com/v1/wallpaper/category`
+url：`http://service.aibizhi.adesk.com/v1/wallpaper/category`
 
 ```json
 {
@@ -588,12 +588,12 @@ url：`http://service.picasso.adesk.com/v1/wallpaper/category`
 
 ### 获取类别下的电脑壁纸
 
-url：`http://service.picasso.adesk.com/v1/wallpaper/category/{类别ID}/wallpaper`
+url：`http://service.aibizhi.adesk.com/v1/wallpaper/category/{类别ID}/wallpaper`
 
 拼接参数与解析与手机壁纸接口类似
 
 url 示例：
-`http://service.picasso.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000003/wallpaper?limit=30&adult=false&first=1&order=new`
+`http://service.aibizhi.adesk.com/v1/wallpaper/category/4e4d610cdf714d2966000003/wallpaper?limit=30&adult=false&first=1&order=new`
 
 ```json
 {
@@ -633,11 +633,11 @@ url 示例：
 
 ### 获取电脑壁纸专辑
 
-url：`http://service.picasso.adesk.com/v1/wallpaper/album`
+url：`http://service.aibizhi.adesk.com/v1/wallpaper/album`
 
 拼接参数与手机壁纸接口类似
 
-url 示例：`http://service.picasso.adesk.com/v1/wallpaper/album?limit=10&adult=false&first=1&order=hot`
+url 示例：`http://service.aibizhi.adesk.com/v1/wallpaper/album?limit=10&adult=false&first=1&order=hot`
 
 
 ```
@@ -755,12 +755,12 @@ url 示例：`http://service.picasso.adesk.com/v1/wallpaper/album?limit=10&adult
 
 ### 获取专辑下的壁纸
 
-url：`http://service.picasso.adesk.com/v1/wallpaper/album/{专辑ID}/wallpaper`
+url：`http://service.aibizhi.adesk.com/v1/wallpaper/album/{专辑ID}/wallpaper`
 
 拼接参数、解析与手机壁纸接口类似
 
 url 示例：
-`http://service.picasso.adesk.com/v1/wallpaper/album/5acc579be7bce7253c78cf9c/wallpaper?limit=30&adult=false&first=1&order=new`
+`http://service.aibizhi.adesk.com/v1/wallpaper/album/5acc579be7bce7253c78cf9c/wallpaper?limit=30&adult=false&first=1&order=new`
 
 ```json
 {
