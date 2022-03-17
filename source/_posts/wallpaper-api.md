@@ -13,11 +13,11 @@ updated: 2022-03-17 13:58:14
 
 url: `http://service.picasso.adesk.com/v1/vertical/vertical`
 
+- skip：略过数量
 - limit：返回数量
+- order：排序方式，`hot`、`favs`、`new`
 - adult：布尔值
 - first：起始位置
-- skip：略过数量
-- order：排序方式，`hot`、`favs`、`new`
 
 url 示例：`http://service.picasso.adesk.com/v1/vertical/vertical?limit=30&skip=180&adult=false&first=0&order=hot`
 
