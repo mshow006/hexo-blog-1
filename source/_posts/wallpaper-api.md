@@ -9,6 +9,8 @@ updated: 2022-03-17 13:58:14
 
 > 原文链接：[https://www.jianshu.com/p/fb1d1ad58a0b](https://www.jianshu.com/p/fb1d1ad58a0b)
 
+<!-- more -->
+
 ### 不分类别获取壁纸接口
 
 url: `http://service.aibizhi.adesk.com/v1/vertical/vertical`
@@ -20,8 +22,6 @@ url: `http://service.aibizhi.adesk.com/v1/vertical/vertical`
 - first：起始位置
 
 url 示例：`http://service.aibizhi.adesk.com/v1/vertical/vertical?limit=30&skip=180&adult=false&first=0&order=hot`
-
-<!-- more -->
 
 ```json
 {
