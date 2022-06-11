@@ -129,7 +129,7 @@ menu:
   # sitemap: /sitemap.xml || fa fa-sitemap
   # commonweal: /404 || fa fa-heartbeat
   工具: /tools || fa fa-gavel
-  唱片: https://service-ib785zm5-1256736423.bj.apigw.tencentcs.com || fa fa-music
+  # 唱片: https://player.yingming006.cn || fa fa-music
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
