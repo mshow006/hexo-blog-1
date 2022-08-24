@@ -80,7 +80,7 @@ UltrISO 使用步骤：
 
 - [Git](https://git-scm.com/)
 - [HeidiSQL](https://www.heidisql.com/)
-- [IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+- [IDEA](https://www.jetbrains.com/idea/download/#section=windows)[code](http://idea.javatiku.cn/?code=1576)
 - [JDK](https://www.injdk.cn/)
 - [VSCode](https://code.visualstudio.com/)
 - [Node.js](http://nodejs.cn/)
