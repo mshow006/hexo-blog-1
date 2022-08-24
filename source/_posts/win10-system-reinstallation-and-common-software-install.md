@@ -81,7 +81,7 @@ UltrISO 使用步骤：
 - [Git](https://git-scm.com/)
 - [HeidiSQL](https://www.heidisql.com/)
 - [IDEA](https://www.jetbrains.com/idea/download/#section=windows)
-- [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [JDK](https://www.injdk.cn/)
 - [VSCode](https://code.visualstudio.com/)
 - [Node.js](http://nodejs.cn/)
 - [WinSCP](https://winscp.net/eng/docs/lang:chs)
