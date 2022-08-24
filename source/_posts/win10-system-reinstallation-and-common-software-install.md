@@ -86,3 +86,16 @@ UltrISO 使用步骤：
 - [Node.js](http://nodejs.cn/)
 - [WinSCP](https://winscp.net/eng/docs/lang:chs)
 - [XShell](https://www.netsarang.com/zh/xshell/)
+
+
+
+win11 原版右键
+
+管理员运行命令：
+
+`reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` 重启就恢复win10右键了
+
+`reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /va /f` 这个是恢复win11右键
+
+不需要重启电脑，重启资源管理器即可，用命令：
+`taskkill /f /im explorer.exe & start explorer.exe`
