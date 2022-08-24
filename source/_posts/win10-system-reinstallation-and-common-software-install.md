@@ -64,20 +64,16 @@ UltrISO 使用步骤：
 
 - [7-zip](https://www.7-zip.org/)
 - [Everything](https://www.voidtools.com/zh-cn/)
-- [Foxmail](https://www.foxmail.com/)
 - [Honeyview](https://www.bandisoft.com/honeyview/)
-- [Listen1](http://listen1.github.io/listen1/)
 - [PotPlayer](http://www.potplayercn.com/)
 - [Typora](https://typora.io/)
 - [uTools](https://u.tools/)
-- [SSR](https://github.com/search?q=shadowsocks-rss)
-- [Office Tool Plus](https://otp.landian.vip/zh-cn/)
+- [clash](https://github.com/Fndroid/clash_for_windows_pkg)
 - [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor)
 - [geekUninstaller](https://geekuninstaller.com/)
 - [QQ](https://im.qq.com/)
 - [微信](https://pc.weixin.qq.com/)
 - [迅雷](http://x.xunlei.com/)
-- [印象笔记](https://www.yinxiang.com/)
 - [菲菲更名宝贝](http://www.ffhome.com/tag/菲菲更名宝贝)
 
 ### 开发工具
