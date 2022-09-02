@@ -12,7 +12,7 @@ date: 2022-03-08 15:10:44
 
 - [netease cloud music api](https://ncm-api.yingming006.cn/)
 
-- [Java 开发手册嵩山版](/reference-books)
+- [工具书](/reference-books)
 
 ### 娱乐
 
