@@ -73,8 +73,8 @@ UltrISO 使用步骤：
 - [geekUninstaller](https://geekuninstaller.com/)
 - [QQ](https://im.qq.com/)
 - [微信](https://pc.weixin.qq.com/)
-- [迅雷](http://x.xunlei.com/)
-- [菲菲更名宝贝](http://www.ffhome.com/tag/菲菲更名宝贝)
+- [迅雷](https://www.52pojie.cn/thread-1414515-1-1.html)
+- [菲菲更名宝贝](https://ffhome.lanzouf.com/i6p7L067akod)
 
 ### 开发工具
 
@@ -86,7 +86,6 @@ UltrISO 使用步骤：
 - [Node.js](http://nodejs.cn/)
 - [WinSCP](https://winscp.net/eng/docs/lang:chs)
 - [XShell](https://www.netsarang.com/zh/xshell/)
-
 
 
 win11 原版右键
