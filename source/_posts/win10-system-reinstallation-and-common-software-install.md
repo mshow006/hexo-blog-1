@@ -88,7 +88,7 @@ UltrISO 使用步骤：
 - [XShell](https://www.netsarang.com/zh/xshell/)
 
 
-win11 原版右键
+### win11 原版右键
 
 管理员运行命令：
 
@@ -98,3 +98,7 @@ win11 原版右键
 
 不需要重启电脑，重启资源管理器即可，用命令：
 `taskkill /f /im explorer.exe & start explorer.exe`
+
+### win11 任务栏
+
+https://github.com/valinet/ExplorerPatcher
